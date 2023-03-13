@@ -17,6 +17,7 @@ class Item_screen extends StatelessWidget {
         builder: (context, state) {
       if (state is UpdateInitial) {
         return Container(
+
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           alignment: Alignment.center,
