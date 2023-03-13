@@ -41,7 +41,7 @@ class Item_screen extends StatelessWidget {
                 children: [
                   Text(state.item.name,
                   style: TextStyle(color: Colors.cyan),),
-                  Text(state.item.price as String),
+                  //Text(state.item.price as String),
                 ],
               ),
             ],

@@ -1,6 +1,6 @@
 class  Item {
   String name;
-  int price;
+  num price;
   String image;
   String? discription;
 
