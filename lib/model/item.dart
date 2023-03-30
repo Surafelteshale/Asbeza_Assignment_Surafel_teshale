@@ -17,11 +17,26 @@ class  Item {
       name: parsedJson['title'],
       price: parsedJson['price'],
       image: parsedJson['image'],
-      discription: parsedJson['discription']
+      discription: parsedJson['description']
     );
   }
+  toJson() {
+    Map<String, dynamic> json = {};
+    json['name'] = name;
+    json['price'] = price;
+    json['image'] = image;
+    json['discription'] = discription;
+    return json;
+  }
 
+  static List itemList(List item) {
+    List items = [];
+    for (var i = 0; i < item.length; i++) {
+      items.add(Item.fromJson(item[i]));
+    }
+    return items;
+  }
 }
-class cart{
+class Cart{
 
 }

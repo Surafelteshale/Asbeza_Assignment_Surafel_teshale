@@ -6,7 +6,7 @@ import '../model/item.dart';
 
 class item_api{
   String url = 'https://fakestoreapi.com/products';
-  Future<Item?> fetchActivity() async {
+  Future<List?> fetchActivity() async {
     final response = await get(Uri.parse(url),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
@@ -14,10 +14,10 @@ class item_api{
       },
     );
     //print(response.body);
-    print(response.statusCode);
-    print(response);
+    //print(response.statusCode);
+    //print(response);
     if (response.statusCode == 200) {
-      return Item.fromJson(json.decode(response.body));
+      return Item.itemList(json.decode(response.body));
     } else {
       throw Exception('Failed to load');
     }

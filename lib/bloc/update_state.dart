@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:asbeza/model/item.dart';
 //part of 'update_bloc.dart';
 import 'package:asbeza/services/apiService.dart';
@@ -21,9 +23,11 @@ class UpdateLoadingState extends UpdateState {
 }
 
 class UpdateSuccessState extends UpdateState {
-  Item item;
+  final List item;
+  final List history;
   UpdateSuccessState(
       this.item,
+      this.history,
       );
 
   @override
